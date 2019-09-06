@@ -1,0 +1,41 @@
+<div>
+ <div>  
+        <app-navbar></app-navbar>
+        </div>
+      
+        <div class="container">
+            <div class="row">
+                        <ul *ngIf="!loginCheck" class="nav navbar-nav navbar-right" id="navbr " >
+       
+                                        <li class="btn" ><button  (click)="onUserClick()" style="color:DodgerBlue;"><span class="glyphicon glyphicon-user" ></span> User </button></li>
+                                        <li class="btn"><button (click)="onMentorClick()" style="color:rgb(255, 83, 30);"><span class="glyphicon glyphicon-user" ></span> Mentor </button></li> 
+                                        <li class="btn"><button (click)="onAdminClick()" style="color:orange;"><span class="glyphicon  glyphicon glyphicon-user"></span> Admin </button></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                                     
+                                      </ul>
+                    <div *ngIf="!loginCheck" class="col-sm-6">
+
+
+                                <app-user *ngIf="user"></app-user>
+                                <app-mentor *ngIf="mentor"></app-mentor>
+                                <app-admin *ngIf="admin"></app-admin>
+                               
+                             
+                        </div>
+                                <!--Login -->
+                                <!--
+                               <ng-template #loginComponentMark>
+                                <loginComponent></loginComponent>
+                        </ng-template>
+                        -->
+                        <div *ngIf="loginCheck" class="col-sm-12">
+                                        <app-login-component></app-login-component>  
+                                       
+                        </div>
+            </div>
+        </div>
+
+<div id="footer">
+       
+<app-jumbotron></app-jumbotron>
+</div>
+</div>

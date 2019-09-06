@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#searchBar{
+    padding-top: 5%;
+    padding-bottom: 0%;
+}
+#searchButtonColor{
+    background-color: #2196F3;
+  color: white;
+}
+.leftF{
+    float: left;
+}
+.rightF{
+    float: right;
+}

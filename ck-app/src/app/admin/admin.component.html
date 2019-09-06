@@ -1,0 +1,12 @@
+<button  type="button" class="btn btn-danger" (click)="onClickLogin()" [disabled]="loginStatus">Login</button>
+
+<!--
+<button  type="button" class="btn btn-danger" (click)="onClickSignup()" [disabled]="signupStatus">Signup</button>
+-->
+<!--
+<app-admin-signup *ngIf="signupStatus"></app-admin-signup>
+-->
+
+<app-admin-login *ngIf="loginStatus"></app-admin-login>
+
+

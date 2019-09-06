@@ -1,0 +1,7 @@
+<button  type="button" class="btn btn-danger" (click)="onClickLogin()" [disabled]="loginStatus">Login</button>
+<button  type="button" class="btn btn-danger" (click)="onClickSignup()" [disabled]="signupStatus">Signup</button>
+
+<app-mentor-signup *ngIf="signupStatus"></app-mentor-signup>
+
+<app-mentor-login *ngIf="loginStatus"></app-mentor-login>
+

@@ -1,0 +1,48 @@
+<!-- NavBar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+     
+      <ul class="nav navbar-nav">
+       <!-- <li class="active" ><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li> -->
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li id="searchBar">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <div class="form-inline " >
+            <input class="form-control mr-sm-2" type="text" placeholder="Course" #courseInput>
+            <button class="btn" id="searchButtonColor" (click)="onSearchClick(courseInput)">Search</button>
+            <button class="btn" id="searchButtonColor" (click)="onCloseClick()" [disabled]="blur">Close</button>
+          </div>
+        </nav>
+      </li>
+      </ul>
+     
+    </div>
+  </nav> 
+  <div *ngIf="searchStatus">
+   
+      <div class="container-fluid" > 
+          <table class="table table-bordered" id="customers" width="50%">
+              <thead class="thead-light"> 
+                  <tr>
+                      <th>Course Name</th>
+                      <th>Mentor Name</th>
+                      <th>Experience</th>
+                      <th>Trainings Delivered</th>
+                      <th>Timing</th>
+                      <th>Fee</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let course of courses" >
+                
+                  <td><p [ngClass]="{select:course.courseName===message}"><a>{{course.courseName}}</a></p></td>
+                  <td><p [ngClass]="{select:course.courseName===message}">{{course.mentorName}}</p></td>
+                  <td><p [ngClass]="{select:course.courseName===message}">{{course.experience}}</p></td>
+                  <td><p [ngClass]="{select:course.courseName===message}">{{course.delivered}}</p></td>
+                  <td><p [ngClass]="{select:course.courseName===message}">{{course.timing}}</p></td>
+                  <td><p [ngClass]="{select:course.courseName===message}">{{course.fee}}</p></td>
+              </tr>
+          </tbody>
+          </table>
+      </div>
+  </div>
